@@ -1,0 +1,48 @@
+
+html { }
+
+body {
+	font-family: Helvetica, sans-serif;
+	background: #000; }
+
+.dice {
+	margin: 20px auto 0;
+	width: 200px;
+	height: 200px;
+	/*
+	border-radius: 100px;
+	border: 4px solid #CCC;
+	*/
+	text-align: center;
+	color: #FFF;
+	font-size: 64px;
+	line-height: 130px;
+	font-weight: bold;
+	text-indent: -9999px;
+	background: transparent url(/i/dice.png) no-repeat 0 0; }
+
+.dice.s1 {
+	background-position: 0 0; }
+
+.dice.s2 {
+	background-position: -200px 0; }
+
+.dice.s3 {
+	background-position: -400px 0; }
+
+.dice.s4 {
+	background-position: -600px 0; }
+
+.dice.s5 {
+	background-position: -800px 0; }
+
+.dice.s6 {
+	background-position: -1000px 0; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	
+	.dice {
+		background-image: url(/i/dice@2x.png);
+		background-size: 1200px 400px; }
+	
+}
