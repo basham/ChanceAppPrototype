@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# VERSION 1.0.2
+
+/css/reset.css
+/js/jgestures.min.js
+
+NETWORK:
+/
+/index.html
+/css/master.css
+/js/script.js
+/i
+http://code.jquery.com
