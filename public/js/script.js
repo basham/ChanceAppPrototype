@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$('body').bind('tapone', roll);
+	$('html').bind('tapone', roll);
 	
 	var dice = [];
 	
@@ -25,47 +25,51 @@ document.addEventListener('touchmove', function (event) {
 function Dice($target, sides) {
 	
 	this.$target = $target;
-	this.isRolling = false;
-	this.delay = 0;
 	this.sides = sides;
+	this.velocity = 0; // degrees rotation per frame
+	this.degrees = 0;
 	
 	this.roll = function() {
+	
+		this.velocity = rand(20, 10);	
+		this.update();
 		
-		var delay = 0;
-		var sideMin = 100;
-		var sideMax = 200;
-		var rollMax = 1000;
-		// Most duration of a throw is sideMax + rollMax
-		
-		while(delay < rollMax) {
-			
-			var rd = rand(sideMax, sideMin);
-			sideMin += 100;
-			sideMax += 100;
-			
-			var timer = setTimeout(function() {
-				// Don't allow repeating random numbers
-				var options = range(sides, 1, parseInt($target.text()));
-				var rn = options[rand(options.length, 0)];
-				$target.text(rn);
-				$target.removeClass('s1 s2 s3 s4 s5 s6').addClass('s' + rn);
-			}, delay);
-			
-			delay += rd;
-		
-		}
 	};
 	
+	this.update = function() {
+		
+		if( this.velocity == 0 )
+			return;
+		
+		this.velocity *= .99;
+		this.velocity = this.velocity < 1 ? 0 : this.velocity;
+		
+		this.degrees += this.velocity;
+		this.degrees = Math.floor(this.degrees);
+		this.degrees %= 360;
+
+		console.log(this.velocity);
+		
+		var v = this.value();
+		this.$target.text(v).removeClass('s1 s2 s3 s4 s5 s6').addClass('s' + v);
+		
+		var target = this;
+		var timer = setTimeout(function() {
+			target.update();
+		}, $.fx.interval);
+		
+	};
+	
+	this.value = function() {
+		return Math.floor( (this.degrees % 360) / (360/this.sides) ) + 1;
+	};
+	
+	this.rolling = function() {
+		return velocity != 0;
+	};
+
 }
 
 function rand(max, min) {
 	return Math.floor(Math.random() * (max-min)) + min;
-}
-
-function range(max, min, exclude) {
-	var a = [];
-	for( var i = min; i <= max; i++ )
-		if( i != exclude)
-			a.push(i);
-	return a;
 }
