@@ -3,11 +3,13 @@
 	-webkit-touch-callout: none;
 	-webkit-user-select:none; }
 
-body {
+html {
+	text-align: center;
 	font-family: Helvetica, sans-serif;
 	background: #000; }
 
 .dice {
+	position: relative;
 	margin: 20px auto 0;
 	width: 200px;
 	height: 200px;
@@ -42,5 +44,15 @@ body {
 	.dice {
 		background-image: url(/i/dice@2x.png);
 		background-size: 1400px 200px; }
+	
+}
+
+/* Landscape */
+@media only screen and (min-width: 321px) {
+
+	.dice {
+		display: inline-block;
+		margin: 50px 10px 0;
+	}
 	
 }
