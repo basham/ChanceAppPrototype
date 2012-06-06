@@ -1,8 +1,7 @@
 CACHE MANIFEST
-# VERSION 1.0.2
+# VERSION 1.0.7
 
 /css/reset.css
-/js/jgestures.min.js
 
 NETWORK:
 /
@@ -11,3 +10,5 @@ NETWORK:
 /js/script.js
 /i
 http://code.jquery.com
+http://eightmedia.github.com
+http://ricostacruz.com

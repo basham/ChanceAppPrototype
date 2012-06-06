@@ -1,4 +1,8 @@
 
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select:none; }
+
 body {
 	font-family: Helvetica, sans-serif;
 	background: #000; }
