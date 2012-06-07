@@ -39,6 +39,24 @@ html {
 .dice.s6 {
 	background-position: -1000px 0; }
 
+.dice.s1.final {
+	background-position: 0 -200px; }
+
+.dice.s2.final {
+	background-position: -200px -200px; }
+
+.dice.s3.final {
+	background-position: -400px -200px; }
+
+.dice.s4.final {
+	background-position: -600px -200px; }
+
+.dice.s5.final {
+	background-position: -800px -200px; }
+
+.dice.s6.final {
+	background-position: -1000px -200px; }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	
 	.dice {
