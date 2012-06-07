@@ -1,7 +1,6 @@
 CACHE MANIFEST
-# VERSION 1.0.22
+# VERSION 1.0.24
 
-/
 /css/reset.css
 http://code.jquery.com/jquery-1.7.1.min.js
 http://eightmedia.github.com/hammer.js/hammer.js
@@ -9,6 +8,7 @@ http://eightmedia.github.com/hammer.js/jquery.hammer.js
 http://ricostacruz.com/jquery.transit/jquery.transit.min.js
 
 NETWORK:
+/
 /css/master.css
 /js/script.js
 /i/dice.png

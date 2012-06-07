@@ -6,11 +6,6 @@ class BitHouseDesign < Sinatra::Base
   get '/' do
     send_file File.join('public', 'index.html')
   end
-  
-  get '/manifest' do
-    headers 'Content-Type' => 'text/cache-manifest'
-    send_file 'public/manifest.manifest'
-  end
 
   not_found do
     redirect '/'
