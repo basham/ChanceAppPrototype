@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# VERSION 1.0.16
+# VERSION 1.0.17
 
 /css/reset.css
 
@@ -11,6 +11,11 @@ NETWORK:
 /i
 /i/dice.png
 /i/dice@2x.png
+css/master.css
+js/script.js
+i
+i/dice.png
+i/dice@2x.png
 http://code.jquery.com
 http://eightmedia.github.com
 http://ricostacruz.com
