@@ -94,6 +94,7 @@ function Dice($target, sides) {
 		if( this.velocity <= 1 && this.velocity >= -1 ) {
 			this.velocity = 0;
 			this.degrees = Math.floor(this.degrees);
+			this.$target.addClass('final')
 			return;
 		}
 
@@ -107,7 +108,7 @@ function Dice($target, sides) {
 		this.degrees %= 360;
 		
 		var v = this.value();
-		this.$target.text(v).removeClass('s1 s2 s3 s4 s5 s6').addClass('s' + v);
+		this.$target.text(v).removeClass('s1 s2 s3 s4 s5 s6 final').addClass('s' + v);
 		
 		var target = this;
 		var timer = setTimeout(function() {
