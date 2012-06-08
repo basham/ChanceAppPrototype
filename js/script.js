@@ -83,7 +83,7 @@ function Dice($target, sides) {
 		else
 			this.velocity = rand(maxVelocity, 5);
 		*/
-		this.velocity = this.primer > 0 ? this.primer * maxVelocity : rand(maxVelocity, 5);
+		this.velocity = this.primer > 0 ? this.primer * maxVelocity : rand(maxVelocity, 10);
 		this.velocity *= Math.round(Math.random()) == 0 ? -1 : 1;
 		//this.release();
 		this.update();
@@ -93,12 +93,13 @@ function Dice($target, sides) {
 		
 		if( this.velocity <= 1 && this.velocity >= -1 ) {
 			this.velocity = 0;
+			this.primer = 0;
 			this.degrees = Math.floor(this.degrees);
 			this.$target.addClass('final')
 			return;
 		}
 
-		this.velocity *= 1 - Math.random() / 25; // Deceleration jitter
+		this.velocity *= 1 - Math.random() / 20; // Deceleration jitter
 		this.degrees += this.velocity;
 		
 		// Find the positive equivalent of a negative degree
