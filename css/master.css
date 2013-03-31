@@ -19,7 +19,7 @@ html {
 	line-height: 130px;
 	font-weight: bold;
 	text-indent: -9999px;
-	background: transparent url(/i/dice.png) no-repeat -1200px 0; }
+	background: transparent url(i/dice.png) no-repeat -1200px 0; }
 
 .dice.s1 {
 	background-position: 0 0; }
@@ -60,7 +60,7 @@ html {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	
 	.dice {
-		background-image: url(/i/dice@2x.png);
+		background-image: url(i/dice@2x.png);
 		background-size: 1400px 400px; }
 	
 }
